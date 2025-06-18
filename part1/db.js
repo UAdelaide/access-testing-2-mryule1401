@@ -10,5 +10,5 @@ const db = mysql.createPool({
 });
 
 router.post('/messages', async function(req, res) {
-    const { itemId, message } = req.body;
+    const { bodyID, message } = req.body;
 module.exports = db;
