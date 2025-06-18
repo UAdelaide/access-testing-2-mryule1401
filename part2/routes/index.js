@@ -10,7 +10,7 @@ router.get('/posts', function(req, res, next) {
   if('user' in req.session){
       console.log(req.session.user);
   }
-  req.pool.getConnection( function(err,connection) {
+  req.pool.getConnection(function(err,connection) {
       if (err) {
         res.sendStatus(500);
         return;
