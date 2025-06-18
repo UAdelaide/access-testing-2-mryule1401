@@ -9,7 +9,7 @@ router.get('/items', async function(req, res) {
     const [rows] =await db.query(`
         SELECT bl.BookID,  bl.Title, b.Author, u.Name AS SellerName, b.Price
         FROM BookListings bl
-        JOIN BookInfo b ON bl.BookInfoID = b.BookID
+        JOIN BookInfo b ON bl.BookInfoID = b.BookInfoID
         JOIN Users u ON bl.SellerID = u.UserID`);
         res.json(rows);
 });
