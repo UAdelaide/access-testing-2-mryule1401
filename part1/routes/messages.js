@@ -14,5 +14,12 @@ const [rows] = await db.query(`
 `);
 res.json(rows);
 });
-
+router.post('/messages', async function(req, res) {
+    const { bookID, message } = req.body;
+    await db.query(`
+        INSERT INTO Messages (BuyerID, SellerID, BookID, MessageText,SentAt)
+        VALUES (?, ?, ?, ?, NOW())
+    `, [CURRENT_BUYER_ID, CURRENT_SELLER_ID, bookID, message]);
+    res.status(201).json({ message: 'Message sent successfully' });
+});
 module.exports = router;
