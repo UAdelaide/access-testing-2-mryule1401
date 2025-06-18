@@ -48,7 +48,7 @@ router.post('/addpost', function(req, res, next) {
         "tags" in req.body ) {
         req.body.author = req.session.user;
 
-        req.pool.getConnection( function(err,connection) {
+        req.pool.getConnection(function(err,connection) {
             if (err) {
               res.sendStatus(500);
               console.log(err);
