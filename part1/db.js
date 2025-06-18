@@ -10,9 +10,10 @@ const db = mysql.createPool({
 });
 
 router.post('/messages', async function(req, res) {
-    const { bodyID, message } = req.body;
+    const { bookID, message } = req.body;
     await db.query(`
         INSERT INTO Messages (BuyerID, SellerID, BookID, MessageText,SentAt)
         VALUES (?, ?, ?, ?, NOW())
-    `, [CURRENT_BUYER_ID, CURRENT_SELLER_ID, bodyID, message]);
+    `, [CURRENT_BUYER_ID, CURRENT_SELLER_ID, bookID, message]);
+    
 module.exports = db;
