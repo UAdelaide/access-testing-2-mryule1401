@@ -15,7 +15,7 @@ const [rows] = await db.query(`
 res.json(rows);
 });
 router.post('/messages', async function(req, res) {
-    const { bookID, message } = req.body;
+    const { bookID,sellerID, message } = req.body;
     await db.query(`
         INSERT INTO Messages (BuyerID, SellerID, BookID, MessageText,SentAt)
         VALUES (?, ?, ?, ?, NOW())
