@@ -7,4 +7,5 @@ var CURRENT_SELLER_ID =2;
 
 router.get('/items', async function(req, res) {
     const [rows] =await db.query(`
-        SELECT b.BookID, b.Title, b.Author, u`)
+        SELECT b.BookID, b.Title, b.Author, u.Name AS SellerName, b.Price
+        F`)
