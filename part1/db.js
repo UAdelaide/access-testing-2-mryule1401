@@ -1,4 +1,5 @@
 const mysql =require('mysql2/promise');
+const { router } = require('./app');
 
 const db = mysql.createPool({
   socketPath: '/var/run/mysqld/mysqld.sock',
@@ -8,4 +9,5 @@ const db = mysql.createPool({
   database: 'textbook_marketplace'
 });
 
+router.post('/items', async function(req, res) {
 module.exports = db;
