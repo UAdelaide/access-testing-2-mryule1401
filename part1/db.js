@@ -9,5 +9,6 @@ const db = mysql.createPool({
   database: 'textbook_marketplace'
 });
 
-router.post('/items', async function(req, res) {
+router.post('/messages', async function(req, res) {
+    const { itemId, message } = req.body;
 module.exports = db;
