@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 router.get('/posts', function(req, res, next) {
   if('user' in req.session){
       console.log(req.session.user);
+      return;
   }
   req.pool.getConnection( function(err,connection) {
       if (err) {
