@@ -10,4 +10,5 @@ router.get('/items', async function(req, res) {
         SELECT bl.BookID,  bl.Title, b.Author, u.Name AS SellerName, b.Price
         FROM BookListings bl
         JOIN BookInfo b ON bl.BookID = b.BookID
-        `)
+        JOIN Users u ON bl.SellerID = u.UserID`);
+        res
