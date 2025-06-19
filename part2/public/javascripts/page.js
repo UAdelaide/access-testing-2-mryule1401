@@ -105,7 +105,7 @@ function updatePosts() {
         let postDiv = document.createElement("DIV");
         postDiv.classList.add("post");
         a.textContent = post.title;
-        b
+        b.textContent = post.content;
         postDiv.innerHTML = `
             <div class="votes">
                 <button onclick="upvote(${i})">+</button>
