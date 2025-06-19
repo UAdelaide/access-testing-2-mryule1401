@@ -106,6 +106,7 @@ function updatePosts() {
         postDiv.classList.add("post");
         a.textContent = post.title;
         b.textContent = post.content;
+        createPost.
         postDiv.innerHTML = `
             <div class="votes">
                 <button onclick="upvote(${i})">+</button>
@@ -113,9 +114,9 @@ function updatePosts() {
                 <button onclick="downvote(${i})">-</button>
             </div>
             <div class="content">
-                <h3><a href="#">${post.title}</a></h3>
+                <h3><a href="#">${a.textContent}</a></h3>
                 <i>By ${post.author}</i>
-                <p>${post.content}</p>
+                <p>${b.textContent}</p>
                 ${tagSpans}<span class="date">${new Date(post.timestamp).toLocaleString()}</span>
             </div>
         `;
