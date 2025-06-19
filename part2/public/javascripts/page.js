@@ -115,7 +115,7 @@ function updatePosts() {
             </div>
             <div class="content">
                 <h3><a href="#">${a.textContent}</a></h3>
-                <i>By ${post.author}</i>
+                <i>By ${c.textContent}</i>
                 <p>${b.textContent}</p>
                 ${tagSpans}<span class="date">${new Date(post.timestamp).toLocaleString()}</span>
             </div>
