@@ -104,7 +104,7 @@ function updatePosts() {
         // Generate the post/question element and populate its inner HTML
         let postDiv = document.createElement("DIV");
         postDiv.classList.add("post");
-
+        A
         postDiv.innerHTML = `
             <div class="votes">
                 <button onclick="upvote(${i})">+</button>
