@@ -106,7 +106,7 @@ function updatePosts() {
         postDiv.classList.add("post");
         a.textContent = post.title;
         b.textContent = post.content;
-        createPost.
+        c.textContent = post.author;
         postDiv.innerHTML = `
             <div class="votes">
                 <button onclick="upvote(${i})">+</button>
